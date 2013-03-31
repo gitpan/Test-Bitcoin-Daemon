@@ -5,8 +5,10 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
     NAME              => 'Test::Bitcoin::Daemon',
     VERSION_FROM      => 'lib/Test/Bitcoin/Daemon.pm', # finds $VERSION
-    PREREQ_PM         => {}, # e.g., Module::Name => 1.1
+    PREREQ_PM         => {
+      'File::Which'   => 0,
+    },
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
       (ABSTRACT_FROM  => 'lib/Test/Bitcoin/Daemon.pm', # retrieve abstract from module
-       AUTHOR         => 'Enoch Root <enoch@>') : ()),
+       AUTHOR         => 'Jean-Pierre Rupp <root@xeno-genesis.com>') : ()),
 );
